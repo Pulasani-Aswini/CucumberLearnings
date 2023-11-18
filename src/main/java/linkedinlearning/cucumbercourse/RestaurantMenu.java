@@ -7,21 +7,27 @@ public class RestaurantMenu {
 
 	public boolean AddMenuItems(RestaurantMenuItem newMenuItem){
 		// TODO Auto-generated method stub
-		System.out.println(MenuItems);
 		if(DoesItemExist(newMenuItem)) {
 			System.out.println("Duplicate item found");
 			throw new IllegalArgumentException("Duplicate Item");
 		}
-		MenuItems.add(newMenuItem);
-		System.out.println(MenuItems);
-		return true ;
+		else {
+			System.out.println("No Duplicate Item found");
+		}
+		return MenuItems.add(newMenuItem);
+		
 	}
 
 	public boolean DoesItemExist(RestaurantMenuItem newMenuItem) {
 		// TODO Auto-generated method stub
 		boolean Exists=false;
-		if(MenuItems.contains(newMenuItem.getItemName())) {
-			Exists=true;
+		for(RestaurantMenuItem item:MenuItems) {
+			System.out.println("Current Iteration get  name"+":  "+item.getItemName());
+			System.out.println("New Item name"+": "+newMenuItem.getItemName());
+			if(item.getItemName()==newMenuItem.getItemName()) {		
+			       Exists=true;
+			       break;
+			}
 		}
 		return Exists;
 	}
