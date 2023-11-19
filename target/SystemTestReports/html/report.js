@@ -1,218 +1,236 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/linkedinlearning/cucumbercourse/features/ScenarioOutlineExample.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/linkedinlearning/cucumbercourse/features/Menumanagement.feature");
 formatter.feature({
-  "name": "Final Bill Calculation",
+  "name": "Menu Management",
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "name": "Customer Bill Amount Calculation",
+formatter.background({
+  "name": "Setup a menu item",
   "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@ScenarioOutlineExample"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.step({
-  "name": "I have a Customer",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "user enters intial bill amount as \u003cIntialBillAmount\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "Sales Tax Rate is \u003cTaxRate\u003e Percent",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "final bill amount calculate is \u003cCalculatedBillAmount\u003e",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "IntialBillAmount",
-        "TaxRate",
-        "CalculatedBillAmount"
-      ]
-    },
-    {
-      "cells": [
-        "100",
-        "10",
-        "110"
-      ]
-    },
-    {
-      "cells": [
-        "200",
-        "8",
-        "216"
-      ]
-    },
-    {
-      "cells": [
-        "100",
-        "1.55",
-        "101.55"
-      ]
-    }
-  ]
-});
-formatter.scenario({
-  "name": "Customer Bill Amount Calculation",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@ScenarioOutlineExample"
-    }
-  ]
-});
-formatter.step({
-  "name": "I have a Customer",
+  "name": "I have a menu item with name \"Cucumber Sandwitch\" and price 20",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.i_have_a_Customer()"
+  "location": "MenuManagementSteps.i_have_a_menu_item_with_name_and_price(String,Integer)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters intial bill amount as 100",
-  "keyword": "And "
+  "name": "I add that menu item",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.user_enters_intial_bill_amount_as(Integer)"
+  "location": "MenuManagementSteps.i_add_that_menu_item()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Sales Tax Rate is 10 Percent",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ScenarioOutlineSteps.sales_Tax_Rate_is_Percent(Integer)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "final bill amount calculate is 110",
+  "name": "Menu Item with name \"Cucumber Sandwitch\" should be added",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.final_bill_amount_calculate_is(Integer)"
+  "location": "MenuManagementSteps.menu_Item_with_name_should_be_added(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Customer Bill Amount Calculation",
+  "name": "Add a menu item",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@ScenarioOutlineExample"
+      "name": "@SmokeTest"
     }
   ]
 });
 formatter.step({
-  "name": "I have a Customer",
+  "name": "I have a menu item with name \"Cucumber Salad\" and price 20",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.i_have_a_Customer()"
+  "location": "MenuManagementSteps.i_have_a_menu_item_with_name_and_price(String,Integer)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters intial bill amount as 200",
-  "keyword": "And "
+  "name": "I add that menu item",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.user_enters_intial_bill_amount_as(Integer)"
+  "location": "MenuManagementSteps.i_add_that_menu_item()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Sales Tax Rate is 8 Percent",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ScenarioOutlineSteps.sales_Tax_Rate_is_Percent(Integer)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "final bill amount calculate is 216",
+  "name": "Menu Item with name \"Cucumber Salad\" should be added",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.final_bill_amount_calculate_is(Integer)"
+  "location": "MenuManagementSteps.menu_Item_with_name_should_be_added(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Setup a menu item",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "I have a menu item with name \"Cucumber Sandwitch\" and price 20",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "MenuManagementSteps.i_have_a_menu_item_with_name_and_price(String,Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I add that menu item",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "MenuManagementSteps.i_add_that_menu_item()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Menu Item with name \"Cucumber Sandwitch\" should be added",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MenuManagementSteps.menu_Item_with_name_should_be_added(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Customer Bill Amount Calculation",
+  "name": "Add another menu item",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "name": "@ScenarioOutlineExample"
+      "name": "@RegularTest"
     }
   ]
 });
 formatter.step({
-  "name": "I have a Customer",
+  "name": "I have a menu item with name \"Veg Sandwitch\" and price 20",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.i_have_a_Customer()"
+  "location": "MenuManagementSteps.i_have_a_menu_item_with_name_and_price(String,Integer)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enters intial bill amount as 100",
-  "keyword": "And "
+  "name": "I add that menu item",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.user_enters_intial_bill_amount_as(Integer)"
+  "location": "MenuManagementSteps.i_add_that_menu_item()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Sales Tax Rate is 1.55 Percent",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "ScenarioOutlineSteps.sales_Tax_Rate_is_Percent(Double)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "final bill amount calculate is 101.55",
+  "name": "Menu Item with name \"Veg Sandwitch\" should be added",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ScenarioOutlineSteps.final_bill_amount_calculate_is(Double)"
+  "location": "MenuManagementSteps.menu_Item_with_name_should_be_added(String)"
 });
 formatter.result({
   "status": "passed"
+});
+formatter.background({
+  "name": "Setup a menu item",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "I have a menu item with name \"Cucumber Sandwitch\" and price 20",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "MenuManagementSteps.i_have_a_menu_item_with_name_and_price(String,Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I add that menu item",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "MenuManagementSteps.i_add_that_menu_item()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Menu Item with name \"Cucumber Sandwitch\" should be added",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MenuManagementSteps.menu_Item_with_name_should_be_added(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Add onemore menu item",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@NightlyBuildTest"
+    },
+    {
+      "name": "@RegularTest"
+    }
+  ]
+});
+formatter.step({
+  "name": "I have a menu item with name \"Cucumber Sandwitch\" and price 20",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "MenuManagementSteps.i_have_a_menu_item_with_name_and_price(String,Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I add that menu item",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "MenuManagementSteps.i_add_that_menu_item()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should see an error message with value \"Duplicate Item\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MenuManagementSteps.i_should_see_an_error_message_with_value(String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError: expected:\u003cDuplicate Item\u003e but was:\u003cnull\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat stepdefinitions.MenuManagementSteps.i_should_see_an_error_message_with_value(MenuManagementSteps.java:54)\r\n\tat ✽.I should see an error message with value \"Duplicate Item\"(file:src/test/java/linkedinlearning/cucumbercourse/features/Menumanagement.feature:44)\r\n",
+  "status": "failed"
 });
 });

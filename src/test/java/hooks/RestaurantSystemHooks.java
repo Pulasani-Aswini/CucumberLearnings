@@ -6,12 +6,12 @@ import cucumber.api.java.Before;
 
 
 public class RestaurantSystemHooks {
-	@Before("@RegularTest")
+	@Before
 	public void BeforeDisplayMessage(Scenario sc) {
 		System.out.println("Before"+sc.getName());
 	}
 	
-	@After("@RegularTest")
+	@After
 	public void AfterDisplayMessage(Scenario sc) {
 		System.out.println("After"+sc.getName());
 	}

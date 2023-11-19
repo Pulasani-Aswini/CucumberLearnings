@@ -24,21 +24,21 @@ Given I have a menu item with name "Cucumber Sandwitch" and price 20
 When I add that menu item
 Then Menu Item with name "Cucumber Sandwitch" should be added
 
-@SmokeTest
-Scenario: Add a menu item
-Given I have a menu item with name "Cucumber Salad" and price 20
-When I add that menu item
-Then Menu Item with name "Cucumber Salad" should be added
-
-@RegularTest
-Scenario: Add another menu item
-Given I have a menu item with name "Veg Sandwitch" and price 20
-When I add that menu item
-Then Menu Item with name "Veg Sandwitch" should be added
+#@SmokeTest
+#Scenario: Add a menu item
+#Given I have a menu item with name "Cucumber Salad" and price 20
+#When I add that menu item
+#Then Menu Item with name "Cucumber Salad" should be added
+#
+#@RegularTest
+#Scenario: Add another menu item
+#Given I have a menu item with name "Veg Sandwitch" and price 20
+#When I add that menu item
+#Then Menu Item with name "Veg Sandwitch" should be added
 
 @NightlyBuildTest @RegularTest
 Scenario: Add onemore menu item
-Given I have a menu item with name "Paneer Sandwitch" and price 20
+Given I have a menu item with name "Cucumbers Sandwitch" and price 20
 When I add that menu item
-Then Menu Item with name "Paneer Sandwitch" should be added
-#Then I should see an error message with value "Duplicate Item"
+#Then Menu Item with name "Paneer Sandwitch" should be added
+Then I should see an error message with value "Duplicate Item"

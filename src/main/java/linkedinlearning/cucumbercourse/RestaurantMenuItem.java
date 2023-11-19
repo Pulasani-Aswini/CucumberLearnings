@@ -1,5 +1,7 @@
 package linkedinlearning.cucumbercourse;
 
+import java.util.Objects;
+
 public class RestaurantMenuItem {
 	private String ItemName;
 	private String Description;
@@ -26,5 +28,23 @@ public class RestaurantMenuItem {
 	public String getItemName() {
 		return ItemName;
 	}
+	@Override
+    public boolean equals(Object obj) {
+        if(this == obj) {
+            return true;
+        }
+        if(obj == null) {
+            return false;
+        }
+        if(getClass() != obj.getClass()) {
+            return false;
+        }
+        RestaurantMenuItem menuItem = (RestaurantMenuItem) obj;
+        return ItemName==menuItem.getItemName();
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(price);
+    }
 
 }

@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.005526">
-    <testcase classname="Final Bill Calculation" name="Customer Bill Amount Calculation" time="0.00443">
-        <system-out><![CDATA[Given I have a Customer.....................................................passed
-And user enters intial bill amount as 100...................................passed
-And Sales Tax Rate is 10 Percent............................................passed
-Then final bill amount calculate is 110.....................................passed
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.018134">
+    <testcase classname="Menu Management" name="Add a menu item" time="0.00802">
+        <system-out><![CDATA[Given I have a menu item with name "Cucumber Sandwitch" and price 20........passed
+When I add that menu item...................................................passed
+Then Menu Item with name "Cucumber Sandwitch" should be added...............passed
+Given I have a menu item with name "Cucumber Salad" and price 20............passed
+When I add that menu item...................................................passed
+Then Menu Item with name "Cucumber Salad" should be added...................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Final Bill Calculation" name="Customer Bill Amount Calculation 2" time="0.000391">
-        <system-out><![CDATA[Given I have a Customer.....................................................passed
-And user enters intial bill amount as 200...................................passed
-And Sales Tax Rate is 8 Percent.............................................passed
-Then final bill amount calculate is 216.....................................passed
+    <testcase classname="Menu Management" name="Add another menu item" time="0.001173">
+        <system-out><![CDATA[Given I have a menu item with name "Cucumber Sandwitch" and price 20........passed
+When I add that menu item...................................................passed
+Then Menu Item with name "Cucumber Sandwitch" should be added...............passed
+Given I have a menu item with name "Veg Sandwitch" and price 20.............passed
+When I add that menu item...................................................passed
+Then Menu Item with name "Veg Sandwitch" should be added....................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Final Bill Calculation" name="Customer Bill Amount Calculation 3" time="0.000705">
-        <system-out><![CDATA[Given I have a Customer.....................................................passed
-And user enters intial bill amount as 100...................................passed
-And Sales Tax Rate is 1.55 Percent..........................................passed
-Then final bill amount calculate is 101.55..................................passed
-]]></system-out>
+    <testcase classname="Menu Management" name="Add onemore menu item" time="0.008941">
+        <failure message="java.lang.AssertionError: expected:&lt;Duplicate Item&gt; but was:&lt;null&gt;&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:834)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at stepdefinitions.MenuManagementSteps.i_should_see_an_error_message_with_value(MenuManagementSteps.java:54)&#13;&#10;&#9;at ✽.I should see an error message with value &quot;Duplicate Item&quot;(file:src/test/java/linkedinlearning/cucumbercourse/features/Menumanagement.feature:44)&#13;&#10;"><![CDATA[Given I have a menu item with name "Cucumber Sandwitch" and price 20........passed
+When I add that menu item...................................................passed
+Then Menu Item with name "Cucumber Sandwitch" should be added...............passed
+Given I have a menu item with name "Cucumber Sandwitch" and price 20........passed
+When I add that menu item...................................................passed
+Then I should see an error message with value "Duplicate Item"..............failed
+
+StackTrace:
+java.lang.AssertionError: expected:<Duplicate Item> but was:<null>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepdefinitions.MenuManagementSteps.i_should_see_an_error_message_with_value(MenuManagementSteps.java:54)
+	at ✽.I should see an error message with value "Duplicate Item"(file:src/test/java/linkedinlearning/cucumbercourse/features/Menumanagement.feature:44)
+]]></failure>
     </testcase>
 </testsuite>

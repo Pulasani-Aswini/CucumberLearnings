@@ -9,11 +9,11 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features={"src/test/java/linkedinlearning/cucumbercourse/features"},
 		glue={"stepdefinitions"},
-//		tags= {"@NightlyBuildTest","@RegularTest"},
+		tags= {"@SmokeTest or @RegularTest"},
 //		tags= {"@ListofStrings"},
 //		tags= {"@ListofListofStrings"},
 //		tags= {"@ListofMaps"},
-		tags= {"@ScenarioOutlineExample"},
+//		tags= {"@ScenarioOutlineExample"},
 		plugin= {"pretty",
 				"html:target/SystemTestReports/html",
 				"json:target/SystemTestReports/json/report.json",

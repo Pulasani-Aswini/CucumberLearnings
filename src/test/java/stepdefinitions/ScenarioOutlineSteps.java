@@ -44,30 +44,32 @@ public class ScenarioOutlineSteps {
 	  System.out.println("Tax rate: "+TaxRate);
 	}
 	
-	public void invokeWebPage(Double expectedValue) {
+	public void invokeWebPage(Double expectedValue) throws InterruptedException {
 		System.setProperty("webdriver.chorme.driver","C:\\chromedriver\\chromedriver.exe");
 		ChromeDriver driver=new ChromeDriver();
-		driver.get("http://localhost:8080/BasicWebsite/Index.jsp");
+		driver.get("http://localhost:8080/BasicWebsite/");
 		WebElement BillAmountTextBox=driver.findElement(By.id("billamount"));
 		WebElement TaxrateTextBox=driver.findElement(By.id("taxrate"));
 		WebElement Button=driver.findElement(By.id("mybutton"));
 		BillAmountTextBox.sendKeys(Integer.toString(intialBillAmount));
+		Thread.sleep(3000);
 		TaxrateTextBox.sendKeys(Double.toString(TaxRate));
+		Thread.sleep(3000);
 		Button.click();
-//		WebElement Header1Element=driver.findElementByXPath("//h1");
-//		System.out.println(Header1Element.getText());
-//		boolean Matched=Header1Element.getText().contains("Final Bill Amount is: $"+expectedValue.toString());
-//		System.out.println(Matched);
+		WebElement Header1Element=driver.findElement(By.xpath("//h1"));
+		System.out.println(Header1Element.getText());
+		boolean Matched=Header1Element.getText().contains("Final Bill Amount is: $"+expectedValue.toString());
+		System.out.println(Matched);
 		
 	}
 
 	@Then("final bill amount calculate is {double}")
-	public void final_bill_amount_calculate_is(Double expectedValue) {
+	public void final_bill_amount_calculate_is(Double expectedValue) throws InterruptedException {
 	   double SystemCalcValue=BillCalculationHelper.CalculateBillForCustomer(this.intialBillAmount,this.TaxRate);
 	   System.out.println("Expected Value: "+expectedValue);
 	   System.out.println("System Calculated Value: "+SystemCalcValue);
 	   assertTrue(expectedValue==SystemCalcValue);
-	  // invokeWebPage(expectedValue);
+	  invokeWebPage(expectedValue);
 	}
 
 

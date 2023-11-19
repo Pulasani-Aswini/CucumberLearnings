@@ -21,14 +21,17 @@ public class RestaurantMenu {
 	public boolean DoesItemExist(RestaurantMenuItem newMenuItem) {
 		// TODO Auto-generated method stub
 		boolean Exists=false;
-		for(RestaurantMenuItem item:MenuItems) {
-			System.out.println("Current Iteration get  name"+":  "+item.getItemName());
-			System.out.println("New Item name"+": "+newMenuItem.getItemName());
-			if(item.getItemName()==newMenuItem.getItemName()) {		
-			       Exists=true;
-			       break;
-			}
-		}
+//		for(RestaurantMenuItem item:MenuItems) {
+//			System.out.println("Current Iteration get  name"+":  "+item.getItemName());
+//			System.out.println("New Item name"+": "+newMenuItem.getItemName());
+//			if(item.getItemName().equalsIgnoreCase(newMenuItem.getItemName())) {		
+//			       Exists=true;
+//			       break;
+//			}
+//		}
+		 if(MenuItems.contains(newMenuItem)) {
+           Exists=true;
+       }
 		return Exists;
 	}
 
